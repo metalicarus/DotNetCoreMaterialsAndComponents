@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DotNetCoreMaterialsAndComponents.Infra.Data
+namespace DotNetCoreMaterialsAndComponents
 {
     public class Program
     {
