@@ -11,6 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCoreMaterialsAndComponents.Infra.Data.Context;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace DotNetCoreMaterialsAndComponents
 {
@@ -23,7 +26,6 @@ namespace DotNetCoreMaterialsAndComponents
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -32,9 +34,24 @@ namespace DotNetCoreMaterialsAndComponents
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotNetCoreMaterialsAndComponents", Version = "v1" });
             });
+
+            services.AddDbContext<ApplicationDbContext>(options => {
+                options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+                new MySqlServerVersion(new Version(8,0,26)));
+            });
+
+            // string defaultConnection = Configuration.GetConnectionString("DefaultConnection");
+            // services.AddDbContextPool<ApplicationDbContext>(options => {
+            //     options.UseMySql(defaultConnection, ServerVersion.AutoDetect(defaultConnection));
+            // });
+
+            // services.AddDbContext<ApplicationDbContext>(
+            // options =>
+            //     options.UseMySql(
+            //         Configuration.GetConnectionString("DefaultConnection"),
+            //         x => x.MigrationsAssembly("DotNetCoreMaterialsAndComponents.Infra.Data/Migrations")));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
