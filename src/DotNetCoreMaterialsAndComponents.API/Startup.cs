@@ -37,19 +37,10 @@ namespace DotNetCoreMaterialsAndComponents
 
             services.AddDbContext<ApplicationDbContext>(options => {
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(8,0,26)));
+                new MySqlServerVersion(new Version(8,0,26)),
+                x => x.MigrationsAssembly("DotNetCoreMaterialsAndComponents.Infra.Data")
+                );
             });
-
-            // string defaultConnection = Configuration.GetConnectionString("DefaultConnection");
-            // services.AddDbContextPool<ApplicationDbContext>(options => {
-            //     options.UseMySql(defaultConnection, ServerVersion.AutoDetect(defaultConnection));
-            // });
-
-            // services.AddDbContext<ApplicationDbContext>(
-            // options =>
-            //     options.UseMySql(
-            //         Configuration.GetConnectionString("DefaultConnection"),
-            //         x => x.MigrationsAssembly("DotNetCoreMaterialsAndComponents.Infra.Data/Migrations")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
