@@ -1,6 +1,6 @@
 using DotNetCoreMaterialsAndComponents.Domain.Enums;
 
-namespace DotNetCoreMaterialsAndComponents.Domain.Models
+namespace DotNetCoreMaterialsAndComponents.Domain.Entities
 {
     public class Material
     {
