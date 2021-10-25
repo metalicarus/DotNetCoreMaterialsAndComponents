@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Domain/DotNetCoreMaterialsAndComponents.Domain.csproj" />
+    <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Infra.Data/DotNetCoreMaterialsAndComponents.Infra.Data.csproj" />
+  </ItemGroup>
 </Project>

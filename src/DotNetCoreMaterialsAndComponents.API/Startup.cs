@@ -35,12 +35,7 @@ namespace DotNetCoreMaterialsAndComponents
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotNetCoreMaterialsAndComponents", Version = "v1" });
             });
 
-            services.AddDbContext<ApplicationDbContext>(options => {
-                options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-                new MySqlServerVersion(new Version(8,0,26)),
-                x => x.MigrationsAssembly("DotNetCoreMaterialsAndComponents.Infra.Data")
-                );
-            });
+           
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
