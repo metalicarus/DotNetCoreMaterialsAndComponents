@@ -1,5 +1,6 @@
 using DotNetCoreMaterialsAndComponents.Domain.Interfaces;
 using DotNetCoreMaterialsAndComponents.Infra.Data.Repositories;
+using DotNetCoreMaterialsAndComponents.Application.Services;
 
 namespace DotNetCoreMaterialsAndComponents.CrossCutting.IOC
 {
@@ -15,6 +16,7 @@ namespace DotNetCoreMaterialsAndComponents.CrossCutting.IOC
             });
 
             services.AddScoped<IMaterialRepository, MaterialRepository>();
+            services.AddScoped<IMaterialService, MaterialService>();
 
             return services;
         }

@@ -7,5 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Domain/DotNetCoreMaterialsAndComponents.Domain.csproj" />
     <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Infra.Data/DotNetCoreMaterialsAndComponents.Infra.Data.csproj" />
+    <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Application/DotNetCoreMaterialsAndComponents.Application.csproj" />
   </ItemGroup>
 </Project>

@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Domain/DotNetCoreMaterialsAndComponents.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs/" />
+    <Folder Include="Mappings/" />
+    <Folder Include="Services/" />
+  </ItemGroup>
 </Project>

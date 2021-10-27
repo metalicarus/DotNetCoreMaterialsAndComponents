@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreMaterialsAndCompo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreMaterialsAndComponents.API", "DotNetCoreMaterialsAndComponents.API.csproj", "{5C9E6E0C-523E-45C3-A93A-D0968232B0D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreMaterialsAndComponents.Application", "..\DotNetCoreMaterialsAndComponents.Application\DotNetCoreMaterialsAndComponents.Application.csproj", "{1B4F0A17-DF06-4F2F-913D-B323A13D4173}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{5C9E6E0C-523E-45C3-A93A-D0968232B0D6}.Release|x64.Build.0 = Release|Any CPU
 		{5C9E6E0C-523E-45C3-A93A-D0968232B0D6}.Release|x86.ActiveCfg = Release|Any CPU
 		{5C9E6E0C-523E-45C3-A93A-D0968232B0D6}.Release|x86.Build.0 = Release|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Debug|x86.Build.0 = Debug|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Release|x64.Build.0 = Release|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Release|x86.ActiveCfg = Release|Any CPU
+		{1B4F0A17-DF06-4F2F-913D-B323A13D4173}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
