@@ -2,41 +2,48 @@ using DotNetCoreMaterialsAndComponents.Domain.Interfaces;
 using DotNetCoreMaterialsAndComponents.Application.Interfaces;
 using System.Threading.Tasks;
 using DotNetCoreMaterialsAndComponents.Application.DTOs;
+using MaterialDomain = DotNetCoreMaterialsAndComponents.Domain.Entities.Material;
 using System.Collections.Generic;
+using AutoMapper;
 
 namespace DotNetCoreMaterialsAndComponents.Application.Services
 {
     public class MaterialService : IMaterialService
     {
         private IMaterialRepository _repository;
+        private readonly IMapper _mapper;
 
-        public MaterialService(IMaterialRepository repository) {
+        public MaterialService(IMaterialRepository repository, IMapper mapper) {
             _repository = repository;
+            _mapper = mapper;
         }
 
-        public Task<Material> CreateAsync(Material material)
+        public async Task<IEnumerable<Material>> GetMaterials()
         {
-            throw new System.NotImplementedException();
+            return _mapper.Map<IEnumerable<Material>>(await _repository.GetMaterialsAsync());
         }
 
-        public Task<Material> GetByMaterialRefAsync(string materialRef)
+        public async Task<Material> GetByMaterialRef(string materialRef)
         {
-            throw new System.NotImplementedException();
+            return _mapper.Map<Material>(await _repository.GetByMaterialRefAsync(materialRef));
         }
 
-        public Task<IEnumerable<Material>> GetMaterialAsync()
+        public async Task<Material> Create(Material material)
         {
-            throw new System.NotImplementedException();
+            return _mapper.Map<Material>(
+                await _repository.CreateAsync(_mapper.Map<MaterialDomain>(material)));
         }
 
-        public Task RemoveAsync(Material material)
+        public async Task<Material> Update(Material material)
         {
-            throw new System.NotImplementedException();
+            return _mapper.Map<Material>(
+                await _repository.UpdateAsync(_mapper.Map<MaterialDomain>(material))
+            );
         }
 
-        public Task<Material> UpdateAsync(Material material)
+        public async Task Remove(Material material)
         {
-            throw new System.NotImplementedException();
+            await _repository.RemoveAsync(_mapper.Map<MaterialDomain>(material));
         }
     }
 }

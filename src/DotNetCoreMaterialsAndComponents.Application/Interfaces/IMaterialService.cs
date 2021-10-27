@@ -6,10 +6,10 @@ namespace DotNetCoreMaterialsAndComponents.Application.Interfaces
 {
     public interface IMaterialService
     {
-        Task<IEnumerable<Material>> GetMaterialAsync();
-        Task<Material> GetByMaterialRefAsync(string? materialRef);
-        Task<Material> CreateAsync(Material material);
-        Task<Material> UpdateAsync(Material material);
-        Task RemoveAsync(Material material);
+        Task<IEnumerable<Material>> GetMaterials();
+        Task<Material> GetByMaterialRef(string? materialRef);
+        Task<Material> Create(Material material);
+        Task<Material> Update(Material material);
+        Task Remove(Material material);
     }
 }
