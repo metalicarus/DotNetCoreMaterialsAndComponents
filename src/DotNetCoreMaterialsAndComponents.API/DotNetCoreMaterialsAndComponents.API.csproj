@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DotNetCoreMaterialsAndComponents.Infra.Data\DotNetCoreMaterialsAndComponents.Infra.Data.csproj" />
+    <ProjectReference Include="..\DotNetCoreMaterialsAndComponents.Application\DotNetCoreMaterialsAndComponents.Application.csproj" />
+    <ProjectReference Include="..\DotNetCoreMaterialsAndComponents.CrossCutting\DotNetCoreMaterialsAndComponents.CrossCutting.csproj" />
   </ItemGroup>
  
 </Project>

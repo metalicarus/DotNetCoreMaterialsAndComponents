@@ -5,7 +5,6 @@ using DotNetCoreMaterialsAndComponents.Application.DTOs;
 using MaterialDomain = DotNetCoreMaterialsAndComponents.Domain.Entities.Material;
 using System.Collections.Generic;
 using AutoMapper;
-
 namespace DotNetCoreMaterialsAndComponents.Application.Services
 {
     public class MaterialService : IMaterialService

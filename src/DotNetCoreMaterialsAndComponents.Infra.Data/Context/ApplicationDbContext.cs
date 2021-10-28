@@ -5,7 +5,6 @@ namespace DotNetCoreMaterialsAndComponents.Infra.Data.Context
 {
     public class ApplicationDbContext : DbContext
     {
-        // public ApplicationDbContext() {}
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base (options) {}
 
         public DbSet<Material> Materials { get; set;}

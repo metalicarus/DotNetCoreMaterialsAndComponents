@@ -9,4 +9,8 @@
     <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Infra.Data/DotNetCoreMaterialsAndComponents.Infra.Data.csproj" />
     <ProjectReference Include="../DotNetCoreMaterialsAndComponents.Application/DotNetCoreMaterialsAndComponents.Application.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+  </ItemGroup>
 </Project>
